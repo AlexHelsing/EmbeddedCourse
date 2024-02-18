@@ -17,7 +17,11 @@ void generateRandomArray(int array[], int *size){
     }
 }
 
-void printArray(int array[], int *size){
+void printArrayDouble(int array[], int *size){
+    int i;
+    for(i = 0; i < *size; i++){
+        printf("%d\n", array[i] * 2);
+    }
 
 }
 
@@ -28,6 +32,8 @@ int main(int argc, char const *argv[])
     srand(time(NULL));
 
     generateRandomArray(array, ptrArrayLength);
+
+    printArrayDouble(array, ptrArrayLength);
 
     printf("%p", array);
     printf("\n");
